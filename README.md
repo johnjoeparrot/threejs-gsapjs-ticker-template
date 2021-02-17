@@ -1,2 +1,2 @@
-# three_js-gsap_js
+# threejs-gsapjs
 Three js scene rendered with the GSAP ticker
