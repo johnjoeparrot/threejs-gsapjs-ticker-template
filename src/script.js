@@ -4,7 +4,7 @@ class Viewport {
 
         //  Camera
         this.camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-         
+
         //  Render
         this.renderer = new THREE.WebGLRenderer({
             antialias: true,
@@ -30,6 +30,7 @@ class Viewport {
         this.scene.add(this.cube);
         this.camera.position.z = 2;
 
+        // Animate Cube
         gsap.to(this.cube.rotation, {
             duration: 10,
             y: THREE.Math.degToRad(360),
@@ -43,7 +44,6 @@ class Viewport {
         gsap.ticker.add(()=>this.render());
         
         // Events
-        this.controls = new THREE.OrbitControls(this.camera);
         window.addEventListener( 'resize', ()=>{this.onWindowResize()}, false );
     }
     
